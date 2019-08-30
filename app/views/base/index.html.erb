@@ -1,16 +1,19 @@
 <div class="container">
+
   <div class="row mt-3">
+    <%= render "navbar" %>
+  </div>
+
+  <div class="row">
 
     <!-- 1st column -->
-    <div class="col-3 mt-4">
-      <h1 class="lead">samslist</h1>
-      <hr>
+    <div class="col-3">
+      <h1 class="lead mb-4">samslist</h1>
       <%= render "cta" %>
     </div>
 
     <!-- 2nd column -->
     <div class="col-7 small">
-      <%= render "navbar" %>
 
       <div class="row">
         <div class="col-4">
@@ -35,8 +38,7 @@
     </div>
 
     <!-- 3rd column -->
-    <div class="col-2 small mt-4">
-      <div class="lead text-muted mb-3">Nearby:</div>
+    <div class="col-2 small">
       <%= render "cities" %>
     </div>
 
