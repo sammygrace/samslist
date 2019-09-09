@@ -4,4 +4,7 @@ class BaseController < ApplicationController
 
   def category
   end
+
+  def item
+  end
 end

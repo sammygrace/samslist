@@ -26,17 +26,13 @@
         </ul>
       </nav>
 
-			<% 2.times do %>
-        
-        <div class="row">
-          <% 4.times do %>
-            <div class="col-xl-3 col-md-6">
-              <%= render "card" %>
-            </div>
+      <% 2.times do %>
+        <div class="card-deck">
+          <% 3.times do %>
+            <%= render "card" %>
           <% end %>
         </div>
-
-			<% end %>
+      <% end %>
 
     </div>
 
