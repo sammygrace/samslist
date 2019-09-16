@@ -1,4 +1,5 @@
 class BaseController < ApplicationController
+
   def index
   end
 
@@ -7,4 +8,8 @@ class BaseController < ApplicationController
 
   def item
   end
+
+  def new_post
+  end
+
 end
