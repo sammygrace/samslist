@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get "/category/:category" => "base#category"
   get "/category/:category/:item" => "base#item"
+
   get "/post/new" => "base#new_post"
+  get "/post/new/:page" => "base#new_post"
 
 end
