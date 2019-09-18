@@ -10,23 +10,30 @@
   <ul class="navbar justify-content-center">
 		<div class="btn-group" role="group" aria-label="Basic example">
       <a href="/post/new/county" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">County</a>
-      <a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">City</a>
-			<a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Type</a>
-			<a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Category</a>
-			<a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Content</a>
-			<a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Map</a>
-      <a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Photos</a>
-			<a href="#" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Preview</a>
+      <a href="/post/new/city" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">City</a>
+			<a href="/post/new/type" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Type</a>
+			<a href="/post/new/category" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Category</a>
+			<a href="/post/new/content" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Content</a>
+			<a href="/post/new/map" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Map</a>
+      <a href="/post/new/photos" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Photos</a>
+			<a href="/post/new/preview" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Preview</a>
 		</div>
 
   </ul>
 </nav>
 
 <%= render "/post/county" if params[:page] == "county" %>
+<%= render "/post/city" if params[:page] == "city" %>
+<%= render "/post/type" if params[:page] == "type" %>
+<%= render "/post/category" if params[:page] == "category" %>
+<%= render "/post/content" if params[:page] == "content" %>
+<%= render "/post/map" if params[:page] == "map" %>
+<%= render "/post/photos" if params[:page] == "photos" %>
+<%= render "/post/preview" if params[:page] == "preview" %>
 
 <div class="row mt-3 mb-4">
 	<div class="col offset-8">
-    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Next</a>
+    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Continue</a>
 	</div>
 </div>
 
