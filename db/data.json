@@ -1,0 +1,15 @@
+{
+  "counties": {
+    "San Francisco Bay Area": ["Oakland", "Fremont", "Milpitas", "San Jose", "Newark", "Cupertino"],
+    "Los Angeles Area": ["Tustin", "Valencia", "Irvine", "Burbank", "Glendale", "Sunland"],
+    "Sacramento Area": ["Rocklin", "Roseville", "Lincoln", "Sacramento", "Elk Grove", "Folsom"]
+  },
+  "categories": {
+    "community": ["activities", "artists", "classes", "events", "lost+found", "musicians", "pets", "rideshare", "volunteers"],
+    "services": ["automotive", "computer", "farm+garden", "financial", "household", "labor/move", "legal", "real estate", "travel/vac"],
+    "housing": ["apts / housing", "office / commercial", "parking / storage", "rooms / shared", "vacation rentals"],
+    "for sale": ["antiques", "appliances", "arts+crafts", "aviation", "beauty+hlth", "bikes", "boats", "books", "clothes+acc", "computers", "electronics", "free", "furniture", "garage sale", "household", "materials", "motorcycles", "photo+video", "sporting", "toys+games"],
+    "jobs": ["accounting+finance", "arch / engineering", "biotech / science", "education", "food / bev / hosp", "legal  /  paralegal", "manufacturing", "medical / health", "real estate", "retail / wholesale", "software / qa / dba", "transport", "writing / editing"],
+    "gigs": ["computer", "creative", "crew", "domestic", "event", "labor", "talent", "writing"]
+  }
+}

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :subcategories
+  resources :categories
+  resources :cities
+  resources :counties
   root to: "base#index"
 
   get "/category/:category" => "base#category"
