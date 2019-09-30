@@ -3,9 +3,9 @@
     Cities
   </a>
 
-  <% 15.times do %>
-    <a href="#" class="list-group-item text-muted list-group-item-action text-truncate">
-      <%= Faker::Address.city %>
-    </a>
+  <% @cities = City.all %>
+
+  <% @cities.each do |city| %>
+    <%= link_to city.name, city, :class => "list-group-item text-muted list-group-item-action text-truncate" %>
   <% end %>
 </div>
