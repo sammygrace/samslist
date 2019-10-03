@@ -20,20 +20,20 @@
 
       <div class="row">
         <div class="col-4">
-          <% 3.times do %>
-            <%= render "list", items: 5 %>
+          <% Category.where("id<4").each do |category| %>
+            <%= render "list", category: category %>
           <% end %>
         </div>
 
         <div class="col-4">
-          <% 2.times do %>
-            <%= render "list", items: 5 %>
+          <% Category.where("id=4").each do |category| %>
+            <%= render "list", category: category %>
           <% end %>
         </div>
 
         <div class="col-4">
-          <% 3.times do %>
-            <%= render "list", items: 5 %>
+          <% Category.where("id>4").each do |category| %>
+            <%= render "list", category: category %>
           <% end %>
         </div>
       </div>

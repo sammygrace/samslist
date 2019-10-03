@@ -1,44 +1,14 @@
 <h1 class="display-4 text-center mb-4">Choose your county:</h1>
 
 <div class="col offset-lg-4">
-
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 1
-    </label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 2
-    </label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 3
-    </label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 4
-    </label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 5
-    </label>
-  </div>
-  <div class="form-check mb-2">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      County 6
-    </label>
-  </div>
-
+  <% County.all.each do |county| %>
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        <%= county.name %>
+      </label>
+    </div>
+  <% end %>
 </div>
 
 <div class="col">

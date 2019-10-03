@@ -5,7 +5,12 @@
         <a href="/counties/1">Home</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="/category/antiques">Antiques</a>
+        <% category = Category.first %>
+        <%= link_to category.name, category_path(category) %>
+      </li>
+      <li class="breadcrumb-item">
+        <% subcategory = Subcategory.first %>
+        <%= link_to subcategory.name, subcategory_path(subcategory) %>
       </li>
       <li class="breadcrumb-item active" aria-current="page">Item</li>
     </ol>

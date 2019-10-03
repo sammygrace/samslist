@@ -1,11 +1,6 @@
-<div class="list-group list-group-flush mb-3">
-  <a href="/category/antiques" class="list-group-item list-group-item-action active text-truncate">
-    <%= Faker::Commerce.department %>
-  </a>
+  <%= link_to category.name, category_path(category), :class => "list-group-item list-group-item-action active text-truncate" %>
 
-  <% items.times do %>
-    <a href="/category/antiques" class="list-group-item list-group-item-action text-truncate">
-      <%= Faker::Commerce.product_name %>
-    </a>
+  <% Subcategory.where("category_id=#{category.id}").each do |subcategory| %>
+    <%= link_to subcategory.name, subcategory_path(subcategory), :class => "list-group-item list-group-item-action text-truncate" %>
   <% end %>
-</div>
+  <br>
