@@ -1,6 +1,6 @@
   <%= link_to category.name, category_path(category), :class => "list-group-item list-group-item-action active text-truncate" %>
 
   <% Subcategory.where("category_id=#{category.id}").each do |subcategory| %>
-    <%= link_to subcategory.name, subcategory_path(subcategory), :class => "list-group-item list-group-item-action text-truncate" %>
+    <%= link_to subcategory.name, category_subcategory_path(category, subcategory), :class => "list-group-item list-group-item-action text-truncate" %>
   <% end %>
   <br>

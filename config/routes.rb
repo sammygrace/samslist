@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     resources :categories
   end
 
+  resources :categories do
+    resources :subcategories
+  end
+
   resources :subcategories
   resources :categories
 

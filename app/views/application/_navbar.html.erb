@@ -20,11 +20,7 @@
 
   <ul class="navbar-nav">
     <% @cities.each do |city| %>
-      <% if active_city(city) %>
-        <%= link_to city.name, city, :class => "nav-link strong active" %>
-      <% else %>
-        <%= link_to city.name, city, :class => "nav-link small" %>
-      <% end %>
+      <%= link_to city.name, city, :class => "nav-link #{active_city(city)}" %>
     <% end %>
   </ul>
 
