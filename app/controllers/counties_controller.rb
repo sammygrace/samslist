@@ -1,7 +1,9 @@
 class CountiesController < ApplicationController
 
+  include Locationalize
+
   def show 
-    @county = County.find(params[:id]) if @county
+    @county = County.find_by(slug: params[:slug])
   end
 
 end

@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :cities do
+  resources :cities, param: :slug do
     resources :subcategories
     resources :categories
   end 
 
-  resources :counties do
+  resources :counties, param: :slug  do
     resources :subcategories
     resources :categories
   end
-
-  resources :categories do
-    resources :subcategories
-  end
-
-  resources :subcategories
-  resources :categories
 
   root to: "counties#show"
 
