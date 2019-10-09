@@ -1,6 +1,6 @@
-  <%= link_to category.name, category_path(category), :class => "list-group-item list-group-item-action active text-truncate" %>
+<%= link_to category.name, county_category_path(@county, category), :class => "list-group-item list-group-item-action bg-light text-truncate" %>
 
-  <% Subcategory.where("category_id=#{category.id}").each do |subcategory| %>
-    <%= link_to subcategory.name, category_subcategory_path(category, subcategory), :class => "list-group-item list-group-item-action text-truncate" %>
-  <% end %>
-  <br>
+<% category.subcategories.each do |subcategory| %>
+  <%= link_to subcategory.name, county_subcategory_path(@county, subcategory), :class => "list-group-item list-group-item-action text-truncate" %>
+<% end %>
+<br>

@@ -1,7 +1,10 @@
 class CitiesController < ApplicationController
 
+  include Locationalize
+
   def show
-    include Locationalize
+    @city = City.find_by(slug: params[:slug])
+    @county = @city.county
   end
 
 end

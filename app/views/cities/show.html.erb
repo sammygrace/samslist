@@ -19,23 +19,20 @@
     <div class="col-md-7 small">
 
       <div class="row">
-        <div class="col-4">
-          <% Category.where("id<4").each do |category| %>
-            <%= render "list", category: category %>
-          <% end %>
-        </div>
-
-        <div class="col-4">
-          <% Category.where("id=4").each do |category| %>
-            <%= render "list", category: category %>
-          <% end %>
-        </div>
-
-        <div class="col-4">
-          <% Category.where("id>4").each do |category| %>
-            <%= render "list", category: category %>
-          <% end %>
-        </div>
+          <% categories = Category.all.to_a %>
+          <div class="col-4">
+            <% categories[0..2].each do |category| %>
+              <%= render "city_listings", category: category %>
+            <% end %>
+          </div>
+          <div class="col-4">
+            <%= render "city_listings", category: categories[3] %>
+          </div>
+          <div class="col-4">
+            <% categories[4..5].each do |category| %>
+              <%= render "city_listings", category: category %>
+            <% end %>
+          </div>
       </div>
 
     </div>

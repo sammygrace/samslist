@@ -1,20 +1,16 @@
 Rails.application.routes.draw do
 
   resources :cities, param: :slug do
-    resources :subcategories
-    resources :categories
+    resources :subcategories, param: :slug
+    resources :categories, param: :slug
   end 
 
   resources :counties, param: :slug  do
-    resources :subcategories
-    resources :categories
+    resources :subcategories, param: :slug
+    resources :categories, param: :slug
   end
 
   root to: "counties#show"
-
-  get "/category/:category" => "base#category"
-  get "/category/:category/:subcategory" => "base#category"
-  get "/category/:category/subcategory/:subcategory/:item" => "base#item"
 
   get "/post/new/:page" => "base#new_post"
 
