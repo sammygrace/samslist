@@ -3,5 +3,4 @@ class County < ApplicationRecord
   has_many :cities
 
   include Sluggerize
-
 end

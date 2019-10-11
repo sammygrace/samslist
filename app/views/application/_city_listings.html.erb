@@ -1,4 +1,4 @@
-<%= link_to category.name, city_category_path(@city, category), :class => "list-group-item list-group-item-action active text-truncate" %>
+<%= link_to category.name, city_category_path(@city, category), :class => "list-group-item list-group-item-action bg-light text-truncate" %>
 
 <% category.subcategories.each do |subcategory| %>
   <%= link_to subcategory.name, city_subcategory_path(@city, subcategory), :class => "list-group-item list-group-item-action text-truncate" %>

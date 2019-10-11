@@ -1,12 +1,11 @@
 module Sluggerize
   extend ActiveSupport::Concern
 
-  included do 
-
+  included do
+    before_save :generate_slug_from_slug_field
     validates_uniqueness_of :slug
-    before_save :set_slug
 
-    def set_slug
+    def generate_slug_from_slug_field
       self.slug = slug_field.parameterize
     end
 
@@ -15,8 +14,7 @@ module Sluggerize
     end
 
     def slug_field
-      try(:name) || raise("Please set slug field value!!")
+      try(:name) || raise("Name does not exist! Please set slug field.")
     end
-
   end
 end
