@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  county_id: 1
+  city_id: 1
+  category_id: 1
+  subcategory_id: 1
+  title: MyString
+  slug: MyString
+  price_cents: 1
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  description: MyString
+
+two:
+  county_id: 1
+  city_id: 1
+  category_id: 1
+  subcategory_id: 1
+  title: MyString
+  slug: MyString
+  price_cents: 1
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  description: MyString
