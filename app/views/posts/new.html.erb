@@ -6,68 +6,15 @@
     </div>
   </div>
 
-<nav class="d-none d-lg-block">
-  <ul class="navbar justify-content-center">
-		<div class="btn-group" role="group" aria-label="Basic example">
-      <a href="/post/new/county" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">County</a>
-      <a href="/post/new/city" class="btn btn-secondary btn-md" role="button" aria-pressed="true">City</a>
-			<a href="/post/new/type" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Type</a>
-			<a href="/post/new/category" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Category</a>
-			<a href="/post/new/content" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Content</a>
-			<a href="/post/new/map" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Map</a>
-      <a href="/post/new/photos" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Photos</a>
-			<a href="/post/new/preview" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Preview</a>
-		</div>
+  <%= render "nav-buttons" %>
 
-  </ul>
-</nav>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3 d-lg-none">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-
-			<ul class="nav">
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/county">County</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/city">City</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/type">Type</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/category">Category</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/content">Content</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/map">Map</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/photos">Photos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="/post/new/preview">Preview</a>
-				</li>
-			</ul>
-
-    </div>
-
-  </nav>
-
-<%= render "/post/county" if params[:page] == "county" %>
-<%= render "/post/city" if params[:page] == "city" %>
-<%= render "/post/type" if params[:page] == "type" %>
-<%= render "/post/category" if params[:page] == "category" %>
-<%= render "/post/content" if params[:page] == "content" %>
-<%= render "/post/map" if params[:page] == "map" %>
-<%= render "/post/photos" if params[:page] == "photos" %>
-<%= render "/post/preview" if params[:page] == "preview" %>
+  <%= render "/post/county" if params[:page] == "county" %>
+  <%= render "/post/city" if params[:page] == "city" %>
+  <%= render "/post/type" if params[:page] == "type" %>
+  <%= render "/post/category" if params[:page] == "category" %>
+  <%= render "/post/content" if params[:page] == "content" %>
+  <%= render "/post/map" if params[:page] == "map" %>
+  <%= render "/post/photos" if params[:page] == "photos" %>
+  <%= render "/post/preview" if params[:page] == "preview" %>
 
 </div>
