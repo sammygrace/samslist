@@ -1,17 +1,14 @@
-<h1 class="display-4 text-center mb-4">Choose the type of post:</h1>
+<h1 class="display-4 text-center mb-4">Choose the subcategory:</h1>
 
 <div class="col offset-lg-4">
-  <% Category.all.each do |category| %>
+  <% Subcategory.all.each do |subcategory| %>
     <div class="form-check mb-2">
       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
       <label class="form-check-label" for="exampleRadios1">
-        <%= category.name %>
+        <%= subcategory.name %>
       </label>
     </div>
   <% end %>
 
 </div>
 
-<div class="col">
-  <%= render "/post/continue-button", step: "category" %>
-</div>

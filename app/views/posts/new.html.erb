@@ -6,15 +6,18 @@
     </div>
   </div>
 
-  <%= render "nav-buttons" %>
+  <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <% @tabs.each do |tab| %>
+			<li class="nav-item">
+				<a class="nav-link" id="pills-<%= tab %>-tab" data-toggle="pill" href="#pills-<%= tab %>" role="tab" aria-controls="pills-<%= tab %>" aria-selected="false"><%= tab.capitalize %></a>
+			</li>
+    <% end %>
+  </ul>
 
-  <%= render "/post/county" if params[:page] == "county" %>
-  <%= render "/post/city" if params[:page] == "city" %>
-  <%= render "/post/type" if params[:page] == "type" %>
-  <%= render "/post/category" if params[:page] == "category" %>
-  <%= render "/post/content" if params[:page] == "content" %>
-  <%= render "/post/map" if params[:page] == "map" %>
-  <%= render "/post/photos" if params[:page] == "photos" %>
-  <%= render "/post/preview" if params[:page] == "preview" %>
+  <div class="tab-content" id="pills-tabContent">
+    <% @tabs.each.with_index do |tab, index| %>
+      <div class="tab-pane fade" id="pills-<%= tab %>" role="tabpanel" aria-labelledby="pills-<%= tab %>-tab"><%= render "posts/#{tab}" %></div>
+    <% end %>
+  </div>
 
 </div>

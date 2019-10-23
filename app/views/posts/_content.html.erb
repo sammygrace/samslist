@@ -3,11 +3,11 @@
 
     <div class="form-group col-md-6 offset-lg-3">
       <label for="formGroupExampleInput">Title of your post</label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Title">
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
     </div>
 
     <div class="form-group col-md-6 offset-lg-3">
-      <label for="inputPassword4">Price</label>
+      <label for="formGroupExampleInput">Price</label>
       <div class="input-group mb-2">
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
@@ -23,11 +23,6 @@
   </div>
 
   <div class="form-group col-md-6 offset-lg-3">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-
-  <div class="form-group col-md-6 offset-lg-3">
     <label for="inputCity">City</label>
     <input type="text" class="form-control" id="inputCity">
   </div>
@@ -40,6 +35,7 @@
         <option>...</option>
       </select>
     </div>
+
     <div class="form-group col-md-2">
       <label for="inputZip">Zip</label>
       <input type="text" class="form-control" id="inputZip">
@@ -51,17 +47,5 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 
-  <div class="form-group col-md-6 offset-lg-3">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-
 </form>
 
-<div class="col">
-  <%= render "/post/continue-button", step: "map" %>
-</div>
