@@ -6,7 +6,7 @@ module Sluggerize
     validates_uniqueness_of :slug
 
     def generate_slug_from_slug_field
-      self.slug = slug_field.parameterize
+      self.slug = Slug.new(self).generate
     end
 
     def to_param
