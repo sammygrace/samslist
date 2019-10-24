@@ -3,7 +3,7 @@
 <div class="col offset-lg-4">
   <% Category.all.each do |category| %>
     <div class="form-check mb-2">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <%= radio_button :post, :category_id, category.id, class: "form-check-input" %>
       <label class="form-check-label" for="exampleRadios1">
         <%= category.name %>
       </label>

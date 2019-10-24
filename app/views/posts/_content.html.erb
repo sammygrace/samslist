@@ -3,7 +3,7 @@
 
     <div class="form-group col-md-6 offset-lg-3">
       <label for="formGroupExampleInput">Title of your post</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
+      <%= form.text_field :title, class: "form-control", placeholder: "Title" %>
     </div>
 
     <div class="form-group col-md-6 offset-lg-3">
@@ -12,20 +12,30 @@
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+        <%= form.text_field :price_cents, class: "form-control", placeholder: "Amount" %>
       </div>
     </div>
 
+  <div class="form-group col-md-6 offset-lg-3">
+    <label for="inputPhone">Phone Number</label>
+    <%= form.text_field :phone, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-md-6 offset-lg-3">
+    <label for="inputEmail">Email</label>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
 
   <div class="form-group col-md-6 offset-lg-3">
     <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <%= form.text_field :street_address, class: "form-control", placeholder: "1234 Main St" %>
   </div>
 
   <div class="form-group col-md-6 offset-lg-3">
     <label for="inputCity">City</label>
-    <input type="text" class="form-control" id="inputCity">
+    <input type="text_field" class="form-control">
   </div>
+
 
   <div class="form-row ml-2">
     <div class="form-group col-md-3 offset-lg-3">
@@ -38,13 +48,13 @@
 
     <div class="form-group col-md-2">
       <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+      <%= form.text_field :zip, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group col-md-6 offset-lg-3">
-    <label for="exampleFormControlTextarea1">Post Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1">Description</label>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
 </form>
