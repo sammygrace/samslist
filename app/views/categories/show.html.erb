@@ -27,11 +27,11 @@
         </ul>
       </nav>
 
-      <% 2.times do %>
+      <% Post.where("category_id=#{@category.id}").each do |post| %>
         <div class="card-deck">
-          <% 3.times do %>
-            <%= render "card" %>
-          <% end %>
+          <div class="col-4">
+            <%= render "card", post: post %>
+          </div>
         </div>
       <% end %>
 

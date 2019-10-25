@@ -1,10 +1,11 @@
 <div class="card mb-4">
   <img src="/DSC_0068.JPG" class="card-img-top" alt="product-image">
   <div class="card-body">
-    <h5 class="card-title"><%= Faker::Commerce.product_name %></h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <h1 class="card-title">$<%= post.price_cents.to_s %></h1>
+    <h2 class="lead"><%= post.title %></h2>
+    <p class="card-text text-truncate"><%= post.description %></p>
   </div>
   <div class="card-footer">
-    <a href="/category/1/subcategory/2/item" class="card-link">See Item</a>
+    <%= link_to "See Item", post_path(post), class: "card-link" %>
   </div>
 </div>
