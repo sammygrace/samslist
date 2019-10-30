@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-
   include Sluggerize
 
   def slug_field
@@ -12,4 +11,6 @@ class Post < ApplicationRecord
   belongs_to :city, optional: true
   belongs_to :category, optional: true
   belongs_to :subcategory, optional: true
+
+  has_many_attached :photos
 end

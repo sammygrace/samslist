@@ -1,8 +1,8 @@
 <div class="card mb-4">
-  <img src="/DSC_0068.JPG" class="card-img-top" alt="product-image">
+  <%= image_tag post.photos.first, class: "card-img-top" if post.photos.present? %>
   <div class="card-body">
-    <h1 class="card-title">$<%= post.price_cents.to_s %></h1>
-    <h2 class="lead"><%= post.title %></h2>
+    <h3 class="card-title text-truncate"><%= post.title %></h3>
+    <h5 class="card-subtitle mb-3">$<%= post.price_cents%></h5>
     <p class="card-text text-truncate"><%= post.description %></p>
   </div>
   <div class="card-footer">

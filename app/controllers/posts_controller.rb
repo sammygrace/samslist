@@ -20,8 +20,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    fields = :slug, :county_id, :city_id, :category_id, :subcategory_id, :title, :price_cents, :street_address, :city, :state, :zip, :description, :email, :phone
-    params.require(:post).permit(fields)
+    params.require(:post).permit(:county_id, :city_id, :category_id, :subcategory_id, :slug, :email, :phone, :description, :title, :zip, :price_cents, :street_address, :photos => [] )
   end
 
 end

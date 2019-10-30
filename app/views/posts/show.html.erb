@@ -33,7 +33,11 @@
     <div class="col-lg-7">
       <h1 class="display-5 text-truncate"><%= @post.title %></h1>
       <h2 class="lead text-truncate">Price: $<%= @post.price_cents %></h2>
-			<img src="/DSC_0068.JPG" class="img-fluid mb-4" alt="Responsive image">
+      <%= image_tag @post.photos.first, class: "img-thumbnail w-100 mb-2" %>
+      <% @post.photos.each do |photo| %>
+        <%= image_tag photo, class: "d-inline-block", style: "max-width:150px; max-height:100px"  %>
+      <% end %>
+
     </div>
 
     <div class="col-lg-5 mt-5 p-2">
@@ -44,7 +48,7 @@
 
   <div class="row">
     <div class="col">
-      <p><%= @post.description %></p>
+      <p class="mt-4"><%= @post.description %></p>
     </div>
 	</div>
 
