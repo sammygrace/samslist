@@ -5,6 +5,9 @@ class Post < ApplicationRecord
     title
   end
 
+  scope :per_subcategory, -> (subcategory) { where(subcategory_id: subcategory.id) }
+  scope :per_category, -> (category) { where(category_id: category.id) }
+
   validates_uniqueness_of :title
 
   belongs_to :county, optional: true

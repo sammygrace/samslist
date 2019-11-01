@@ -1,5 +1,7 @@
 class Subcategory < ApplicationRecord
+  include Sluggerize
+
   belongs_to :category
 
-  include Sluggerize
+  has_many :posts
 end

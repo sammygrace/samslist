@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+#fake data
 gem 'faker'
+
+#pagination
+gem 'pagy'
 
 ruby '2.6.3'
 
