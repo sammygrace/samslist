@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   include Sluggerize
 
   def slug_field
-    :title
+    title
   end
 
   validates_uniqueness_of :title

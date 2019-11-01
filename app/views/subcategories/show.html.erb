@@ -28,13 +28,13 @@
         </ul>
       </nav>
 
-      <% Post.where("subcategory_id=#{@subcategory.id}").each do |post| %>
-        <div class="card-deck">
-          <div class="col-4">
-            <%= render "card", post: post %>
-          </div>
+    <div class="card-deck">
+      <% @post.each do |post| %>
+        <div class="col-4">
+          <%= render "card", post: post %>
         </div>
       <% end %>
+    </div>
 
     </div>
 

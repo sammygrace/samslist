@@ -35,3 +35,31 @@ json["categories"].each_pair do |category_name, subcategory_names|
     })
   end
 end
+
+1000.times do
+  county = County.all.sample
+  category = Category.all.sample
+  Post.create({
+    county_id: county.id,
+    city_id: City.where("county_id=#{county.id}").sample.id,
+    category_id: category.id,
+    subcategory_id: Subcategory.where("category_id=#{category.id}").sample.id,
+    title: Faker::Commerce.product_name,
+    street_address: Faker::Address.street_address,
+    city_or_province: Faker::Address.city,
+    state: Faker::Address.state,
+    zip: Faker::Address.zip,
+    description: Faker::Lorem.paragraph(sentence_count: 20),
+    email: Faker::Internet.email,
+    price_cents: Faker::Number.within(range: 0..200),
+  })
+end
+
+Post.all.each do |post|
+  Faker::Number.within(range: 1..8).times do
+    number = Faker::Number.within(range: 1..500)
+    file = "#{number}.png"
+    path = "db/photos/#{file}"
+    post.photos.attach(io: File.open(path), filename: file)
+  end
+end

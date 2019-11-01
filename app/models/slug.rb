@@ -9,7 +9,7 @@ class Slug
 
   private
   def candidate
-    @object.slug_field.to_s.parameterize
+    @object.slug_field.parameterize
   end
   
   def suffix
