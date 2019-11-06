@@ -31,3 +31,6 @@
 */*.swp
 */*/*.swp
 */*/*/*.swp
+
+#Ignore photos
+/db/photos/*

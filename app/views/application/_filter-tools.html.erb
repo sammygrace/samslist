@@ -2,63 +2,28 @@
 
   <!-- name -->
   <div class="form-row">
-
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Jane" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Doe" required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
+    <div class="col-md-12 mb-3">
+      <label>Search By Title</label>
+      <input name="title" method="get" type="text" class="form-control" placeholder="Title of Listing" value="<%= params[:title] %>">
     </div>
   </div>
 
+  <p class="mb-2">Filter By Price</p>
   <div class="form-row">
-		<div class="col-md-12 mb-3">
-      <label for="validationCustomUsername">Username</label>
+		<div class="col-6 mb-3">
       <div class="input-group">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <span class="input-group-text" id="inputGroupPrepend">$</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
+        <input name="price_min" method="get" type="text" class="form-control" placeholder="Min" value="<%= params[:price_min] %>" aria-describedby="inputGroupPrepend">
+      </div>
+    </div>
+		<div class="col-6 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">$</span>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- location -->
-  <div class="form-row">
-
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-      <div class="invalid-feedback">
-        Please provide a valid state.
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
+        <input name="price_max" method="get" type="text" class="form-control" placeholder="Max" value="<%= params[:price_max] %>" aria-describedby="inputGroupPrepend">
       </div>
     </div>
 

@@ -41,9 +41,9 @@ end
   category = Category.all.sample
   Post.create({
     county_id: county.id,
-    city_id: City.where("county_id=#{county.id}").sample.id,
+    city_id: City.where(county_id: county.id).sample.id,
     category_id: category.id,
-    subcategory_id: Subcategory.where("category_id=#{category.id}").sample.id,
+    subcategory_id: Subcategory.where(category_id: category.id).sample.id,
     title: Faker::Commerce.product_name,
     street_address: Faker::Address.street_address,
     city_or_province: Faker::Address.city,
@@ -52,6 +52,7 @@ end
     description: Faker::Lorem.paragraph(sentence_count: 20),
     email: Faker::Internet.email,
     price_cents: Faker::Number.within(range: 0..200),
+    phone: Faker::PhoneNumber.phone_number,
   })
 end
 

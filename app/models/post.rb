@@ -7,6 +7,9 @@ class Post < ApplicationRecord
 
   scope :per_subcategory, -> (subcategory) { where(subcategory_id: subcategory.id) }
   scope :per_category, -> (category) { where(category_id: category.id) }
+  scope :filter_by, -> (title) { where("title ilike ?", title) }
+  scope :filter_price_max, -> (max) { where("price_cents <= ?", max) }
+  scope :filter_price_min, -> (min) { where("price_cents >= ?", min) }
 
   validates_uniqueness_of :title
 
