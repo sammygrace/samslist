@@ -5,7 +5,7 @@
       <%= link_to "Home", county_path(County.first) %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to "Category Name"%>
+      <%= link_to @category.name, county_category_path(@county, @category) %>
     </li>
     <li class="breadcrumb-item">
       <%= link_to "Subcategory Name" %>
