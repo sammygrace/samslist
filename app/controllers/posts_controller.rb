@@ -3,12 +3,14 @@ class PostsController < ApplicationController
   def new
     @tabs= %w{county city category subcategory content map photos preview}
     @post = Post.new
+    @county = County.first
   end
 
   def show
     @post = Post.find_by(slug: params[:slug])
-    @county = County.first
-    @category = Category.first
+    @county = County.all.to_a[@post.county_id-1]
+    @category = Category.all.to_a[@post.category_id-1]
+    @subcategory = Subcategory.all.to_a[@post.subcategory_id-1]
   end
 
   def create

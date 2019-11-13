@@ -2,15 +2,15 @@
 
   <ol class="nav">
     <li class="breadcrumb-item">
-      <%= link_to "Home", county_path(County.first) %>
+      <%= link_to "Home", county_path(@county) %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to @category.name, county_category_path(@county, @category) %>
+      <%= link_to @category.name, county_category_path(@county, @category) if @category %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to "Subcategory Name" %>
+      <%= link_to @subcategory.name, county_subcategory_path(@county, @subcategory) if @subcategory %>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Item Title</li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @post.title %></li>
   </ol>
 
   <ul class="nav justify-content-end">

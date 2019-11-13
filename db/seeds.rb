@@ -57,7 +57,7 @@ end
 end
 
 Post.all.each do |post|
-  Faker::Number.within(range: 1..8).times do
+  Faker::Number.within(range: 3..8).times do
     number = Faker::Number.within(range: 1..500)
     file = "#{number}.png"
     path = "db/photos/#{file}"

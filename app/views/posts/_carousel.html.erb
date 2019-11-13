@@ -1,5 +1,4 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  
   <ol class="carousel-indicators">
     <% photos.each.with_index do |photo, index| %>
       <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>" class="<%= :active if index==0 %>"></li>
@@ -9,7 +8,7 @@
   <div class="carousel-inner">
     <% photos.each.with_index do |photo, index| %>
       <div class="carousel-item <%= :active if index==0 %>">
-        <%= image_tag photo, class: "d-block w-95" %>
+        <%= image_tag photo, class: "w-100 d-block" %>
       </div>
     <% end %>
   </div> 
@@ -22,4 +21,16 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
+<div class="row">
+  <div class="col mt-2">
+    <div class="btn-group">
+      <% @post.photos.each.with_index do |photo, index| %>
+        <button type="button" class="btn btn-light" data-carousel-target-id="<%= index %>">
+          <%= image_tag photo, class: "w-100" %>
+        </button>
+      <% end %>
+    </div>
+  </div>
 </div>

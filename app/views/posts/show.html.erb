@@ -1,6 +1,10 @@
 <div class="container-fluid">
 
-  <%= render "breadcrumb", post: @post %>
+  <div class="row">
+    <div class="col">
+      <%= render "breadcrumb", post: @post %>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col small text-center">
@@ -32,36 +36,15 @@
   </div>
 
   <div class="row">
-    <div class="col-5">
+    <div class="col-lg-5 col-md-6 mb-3">
       <%= render "carousel", photos: @post.photos %>
     </div>
-
-    <div class="col-lg-5 ml-5">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101266.92986047953!2d-121.96442134991197!3d37.517550380992425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc42851208cdb%3A0x2ee76e1eb80863b3!2sFremont%2C%20CA%2094539!5e0!3m2!1sen!2sus!4v1568138552016!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <div class="col-5">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101266.92986047953!2d-121.96442134991197!3d37.517550380992425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc42851208cdb%3A0x2ee76e1eb80863b3!2sFremont%2C%20CA%2094539!5e0!3m2!1sen!2sus!4v1568138552016!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       <h2 class="display-5 mt-3">My Info</h2>
       <p><strong>Email: </strong><%= @post.email %></p>
       <p><strong>Phone Number: </strong><%= @post.phone %></p>
       <p><strong>Address: </strong><%= @post.street_address %> <%= @post.city_or_province %>, <%= @post.state %> <%= @post.zip %></p>
-    </div>
-	</div>
-
-<!--  <div class="row">
-    <div class="col mt-2">
-      <% @post.photos.each do |photo| %>
-        <button><%= image_tag photo, class: "d-inline-block btn", style: "max-width:120px", data: "carousel_target_id" %></button>
-      <% end %>
-    </div>
-  </div>-->
-
-  <div class="row">
-    <div class="col mt-2">
-			<div class="btn-group">
-        <% @post.photos.each.with_index do |photo, index| %>
-          <button type="button" class="btn btn-light" data-carousel-target-id="<%= index %>">
-            <%= image_tag photo, style: "width:100px" %>
-          </button>
-        <% end %>
-			</div>
     </div>
   </div>
 
