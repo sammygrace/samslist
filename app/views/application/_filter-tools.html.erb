@@ -1,13 +1,15 @@
 <form class="needs-validation" novalidate>
 
-  <!-- name -->
+  <!-- title -->
   <div class="form-row">
     <div class="col-md-12 mb-3">
       <label>Search By Title</label>
-      <input name="title" method="get" type="text" class="form-control" placeholder="Title of Listing" value="<%= params[:title] %>">
+      <input name="title" method="get" type="text" class="form-control" 
+      placeholder="Title of Listing" value="<%= params[:title] %>">
     </div>
   </div>
 
+  <!-- price -->
   <p class="mb-2">Filter By Price</p>
   <div class="form-row">
 		<div class="col-6 mb-3">
@@ -29,6 +31,7 @@
 
   </div>
 
+  <!--
 	<div class="custom-control custom-checkbox">
 		<input type="checkbox" class="custom-control-input" id="customCheck1">
 		<label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
@@ -61,6 +64,7 @@
 
 	<label for="customRange1">Example range</label>
 	<input type="range" class="custom-range" id="customRange1">
+  -->
 
   <!-- submit button -->
   <button class="btn btn-primary mt-3 mb-3" type="submit">Submit form</button>

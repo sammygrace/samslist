@@ -22,7 +22,7 @@
 
     <div class="card-deck">
       <% @posts.each do |post| %>
-        <div class="col-4">
+        <div class="col-lg-4 col-sm-6">
           <%= render "card", post: post %>
         </div>
       <% end %>

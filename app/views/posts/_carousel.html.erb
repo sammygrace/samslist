@@ -27,7 +27,7 @@
   <div class="col mt-2">
     <div class="btn-group">
       <% @post.photos.each.with_index do |photo, index| %>
-        <button type="button" class="btn btn-light" data-carousel-target-id="<%= index %>">
+        <button type="button" class="btn btn-light p-0" data-carousel-target-id="<%= index %>">
           <%= image_tag photo, class: "w-100" %>
         </button>
       <% end %>

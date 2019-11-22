@@ -8,9 +8,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(slug: params[:slug])
-    @county = County.all.to_a[@post.county_id-1]
-    @category = Category.all.to_a[@post.category_id-1]
-    @subcategory = Subcategory.all.to_a[@post.subcategory_id-1]
+    @county = @post.county if @post.county || County.first
+    @city = @post.city
+    @category = @post.category
+    @subcategory = @post.subcategory
   end
 
   def create
@@ -24,7 +25,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:county_id, :city_id, :category_id, :subcategory_id, :slug, :email, :phone, :description, :title, :zip, :price_cents, :city_or_province, :street_address, :photos => [] )
+    params.require(:post).permit(:county_id, :city_id, :category_id, :subcategory_id, :slug, :state, :email, :phone, :description, :title, :zip, :price_cents, :city_or_province, :street_address, :photos => [] )
   end
 
 end
