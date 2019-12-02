@@ -2,13 +2,16 @@
 
   <ol class="nav">
     <li class="breadcrumb-item">
-      <%= link_to "Home", county_path(@county) %>
+      <%= link_to @post.county.name, county_path(@post.county) %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to @category.name, city_category_path(@city, @category) if @category %>
+      <%= link_to @post.city.name, county_path(@post.city) %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to @subcategory.name, county_subcategory_path(@county, @subcategory) if @subcategory %>
+      <%= link_to @post.category.name, county_category_path(@post.county, @post.category) %>
+    </li>
+    <li class="breadcrumb-item">
+      <%= link_to @post.subcategory.name, county_subcategory_path(@post.county, @post.subcategory) %>
     </li>
     <li class="breadcrumb-item active" aria-current="page"><%= @post.title %></li>
   </ol>

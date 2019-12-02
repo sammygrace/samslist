@@ -1,9 +1,12 @@
 <div class="card mb-4">
-  <%= image_tag post.photos.first, class: "card-img-top" %>
+  <%= image_tag post.photos.first, class: "card-img-top", style: "height:250px; object-fit:cover" %>
   <div class="card-body">
     <h3 class="card-title text-truncate"><%= post.title %></h3>
     <h5 class="card-subtitle mb-3">$<%= post.price_cents%></h5>
     <p class="card-text text-truncate"><%= post.description %></p>
+  </div>
+  <div class="card-footer">
+    <%= post.city_or_province %>, <%= post.state %>
   </div>
   <div class="card-footer">
     <%= link_to "See Item", post_path(post), class: "card-link" %>

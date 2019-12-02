@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+#ruby version -- should be on top
+ruby '2.6.3'
+
 #fake data
 gem 'faker'
 
 #pagination
 gem 'pagy'
 
-ruby '2.6.3'
+#repl in server
+gem 'pry'
+gem 'pry-nav'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

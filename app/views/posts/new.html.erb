@@ -2,7 +2,25 @@
 
   <div class="row mt-md-3 mt-lg-4">
     <div class="col">
-      <%= render "breadcrumb" %>
+      <nav class="navbar navbar-light bg-light mb-4 p-4">
+        <ol class="nav">
+          <li class="breadcrumb-item">
+            <%= link_to "< Back", :back %>
+          </li>
+        </ol>
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <%= link_to "Create a Post", new_post_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link disabled">|</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 
