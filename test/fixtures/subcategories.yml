@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: activities
   category_id: 1
+  id: 1
+  slug: activities
 
 two:
-  name: MyString
-  category_id: 1
+  name: free 
+  category_id: 4
+  id: 2
+  slug: free

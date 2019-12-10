@@ -5,7 +5,7 @@
       <%= link_to @post.county.name, county_path(@post.county) %>
     </li>
     <li class="breadcrumb-item">
-      <%= link_to @post.city.name, county_path(@post.city) %>
+      <%= link_to @post.city.name, city_path(@post.city) %>
     </li>
     <li class="breadcrumb-item">
       <%= link_to @post.category.name, county_category_path(@post.county, @post.category) %>

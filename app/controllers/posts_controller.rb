@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(slug: params[:slug])
-    @county = @post.county if @post.county || County.first
+    @county = @post.county
     @city = @post.city
     @category = @post.category
     @subcategory = @post.subcategory

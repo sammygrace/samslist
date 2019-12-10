@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: community
+  id: 1
+  slug: community
 
 two:
-  name: MyString
+  name: for sale 
+  id: 2
+  slug: for-sale
