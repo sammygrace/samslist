@@ -16,8 +16,8 @@
     next_buttons[i].addEventListener('click', function(event) {
       var button = event.currentTarget;
       var current_tab = button.closest('.tab-pane')
-      var next_tab = current_tab.nextSibling;
-      var index = next_tab.nextSibling.attributes['id'].value;
+      var next_tab = current_tab.nextSibling.nextSibling;
+      var index = next_tab.attributes['id'].value;
       var indicator = document.querySelector(`[href='#${index}']`);
       indicator.click();
     });
@@ -30,8 +30,8 @@
     prev_buttons[i].addEventListener('click', function(event) {
       var button = event.currentTarget;
       var current_tab = button.closest('.tab-pane')
-      var prev_tab = current_tab.previousSibling;
-      var index = prev_tab.previousSibling.attributes['id'].value;
+      var next_tab = current_tab.previousSibling.previousSibling;
+      var index = next_tab.attributes['id'].value;
       var indicator = document.querySelector(`[href='#${index}']`);
       indicator.click();
     });

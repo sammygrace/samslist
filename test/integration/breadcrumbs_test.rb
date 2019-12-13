@@ -13,9 +13,13 @@ class BreadcrumbsTest < ActionDispatch::IntegrationTest
   end
 
   test "post county appears on breadcrumb" do 
-    @post = nil
-    @county = @post.county
+    @post = posts(:one)
     get "/posts/#{@post.slug}/"
-    assert body =~ /#{@county.name}/
+
+    assert_select "li.breadcrumb-item", text: @post.county.name
+    assert_select "li.breadcrumb-item", text: @post.city.name
+    assert_select "li.breadcrumb-item", text: @post.category.name
+    assert_select "li.breadcrumb-item", text: @post.subcategory.name
+    assert_select "li.breadcrumb-item", text: @post.title
   end
 end

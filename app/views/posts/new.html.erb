@@ -38,7 +38,7 @@
   <%= form_for @post do |form| %>
     <div class="tab-content" id="pills-tabContent">
       <% @tabs.each.with_index do |tab, index| %>
-        <div class="tab-pane fade show <%= :active if index==0 %>" id="pills-<%= tab %>" role="tabpanel" aria-labelledby="pills-<%= tab %>-tab">
+        <div class="tab-pane fade show <%= :active if index==0 %>" href="#pills-<%= tab %>" id="pills-<%= tab %>" role="tabpanel" aria-labelledby="pills-<%= tab %>-tab">
           <%= render tab, form: form %>
         </div>
       <% end %>

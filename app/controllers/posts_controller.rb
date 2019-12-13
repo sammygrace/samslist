@@ -8,10 +8,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(slug: params[:slug])
-    @county = @post.county
-    @city = @post.city
-    @category = @post.category
-    @subcategory = @post.subcategory
   end
 
   def create
